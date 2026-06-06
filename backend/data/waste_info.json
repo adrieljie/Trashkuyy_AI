@@ -1,0 +1,138 @@
+{
+  "battery": {
+    "title": "Battery",
+    "description": "Sampah elektronik berbentuk baterai yang mengandung bahan kimia berbahaya.",
+    "processing": [
+      "Kumpulkan di dropbox e-waste.",
+      "Jangan campur dengan sampah biasa.",
+      "Kirim ke fasilitas daur ulang baterai.",
+      "Isolasi kutub baterai agar tidak korsleting."
+    ],
+    "impact": [
+      "Mengandung merkuri, kadmium, dan timbal yang sangat beracun.",
+      "Mencemari tanah dan air.",
+      "Berpotensi menyebabkan kebakaran."
+    ]
+  },
+  "biological": {
+    "title": "Biological",
+    "description": "Sampah organik basah seperti sisa makanan, daun, dan buah busuk.",
+    "processing": [
+      "Buat kompos.",
+      "Gunakan lubang biopori atau komposter.",
+      "Dapat dijadikan eco enzyme."
+    ],
+    "impact": [
+      "Menghasilkan gas metana penyebab pemanasan global.",
+      "Menghasilkan bau busuk dan menarik hama.",
+      "Mencemari lingkungan jika bercampur sampah lain."
+    ]
+  },
+  "cardboard": {
+    "title": "Cardboard",
+    "description": "Sampah kardus yang mudah didaur ulang.",
+    "processing": [
+      "Lipat dan pisahkan dari sampah basah.",
+      "Kirim ke bank sampah atau pengepul.",
+      "Daur ulang menjadi kardus baru."
+    ],
+    "impact": [
+      "Tidak bisa didaur ulang jika basah atau kotor.",
+      "Menambah volume sampah kering di TPA."
+    ]
+  },
+  "clothes": {
+    "title": "Clothes",
+    "description": "Pakaian bekas yang masih bisa digunakan atau didaur ulang.",
+    "processing": [
+      "Donasikan pakaian layak pakai.",
+      "Upcycle menjadi tas, lap, atau kerajinan.",
+      "Recycle ke pabrik tekstil."
+    ],
+    "impact": [
+      "Serat sintetis menghasilkan mikroplastik.",
+      "Butuh puluhan hingga ratusan tahun untuk terurai.",
+      "Industri fashion menjadi penghasil limbah kedua terbesar dunia."
+    ]
+  },
+  "glass": {
+    "title": "Glass",
+    "description": "Botol atau pecahan kaca yang dapat didaur ulang 100%.",
+    "processing": [
+      "Pisahkan dari sampah lain.",
+      "Kumpulkan dan kirim ke pengepul kaca.",
+      "Daur ulang menjadi produk kaca baru."
+    ],
+    "impact": [
+      "Pecahan kaca membahayakan manusia.",
+      "Tidak dapat terurai sehingga menumpuk di TPA."
+    ]
+  },
+  "metal": {
+    "title": "Metal",
+    "description": "Sampah logam dan kaleng.",
+    "processing": [
+      "Bersihkan dari sisa makanan.",
+      "Remukkan agar hemat ruang.",
+      "Kumpulkan untuk didaur ulang."
+    ],
+    "impact": [
+      "Berkarat dan mencemari tanah.",
+      "Menambah sampah anorganik di TPA."
+    ]
+  },
+  "paper": {
+    "title": "Paper",
+    "description": "Jenis kertas seperti dokumen, majalah, dan buku.",
+    "processing": [
+      "Pisahkan dari sampah basah.",
+      "Setorkan ke bank sampah.",
+      "Daur ulang kembali menjadi kertas."
+    ],
+    "impact": [
+      "Membusuk dan tidak bisa didaur ulang jika basah.",
+      "Meningkatkan kebutuhan penebangan pohon."
+    ]
+  },
+  "plastic": {
+    "title": "Plastic",
+    "description": "Jenis plastik seperti botol PET, kantong, dan kemasan.",
+    "processing": [
+      "Pisahkan berdasarkan jenisnya.",
+      "Cuci sebelum daur ulang.",
+      "Gunakan dropbox plastik atau bank sampah."
+    ],
+    "impact": [
+      "Terurai dalam 400–1.000 tahun.",
+      "Memecah menjadi mikroplastik yang masuk tubuh manusia.",
+      "Merusak ekosistem laut."
+    ]
+  },
+  "shoes": {
+    "title": "Shoes",
+    "description": "Sepatu bekas berbahan karet, kain, dan kulit.",
+    "processing": [
+      "Donasikan jika masih layak.",
+      "Upcycle menjadi pot, dekorasi, atau bahan kreatif.",
+      "Gunakan program daur ulang sepatu."
+    ],
+    "impact": [
+      "Bahan campuran sulit terurai.",
+      "Menghasilkan mikroplastik."
+    ]
+  },
+  "trash": {
+    "title": "Trash",
+    "description": "Sampah residu yang tidak dapat didaur ulang.",
+    "processing": [
+      "Minimalkan produksi sampah.",
+      "Pisahkan dari sampah daur ulang.",
+      "Gunakan fasilitas incinerator dengan kontrol emisi."
+    ],
+    "impact": [
+      "Menambah beban TPA.",
+      "Menghasilkan gas metana dan cairan beracun.",
+      "Mencemari tanah dan air."
+    ]
+  }
+}
