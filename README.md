@@ -1,0 +1,1 @@
+# Trashkuyy_AI
