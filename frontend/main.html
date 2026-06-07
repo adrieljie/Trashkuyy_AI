@@ -1,80 +1,173 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Klasifikasi Sampah</title>
+    <title>TRASHKUYY - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="header-content">
-            <img src="/Users/adrieljie2708/AOL_AI_NEW/Logo.PNG" alt="" class="logo">
-            <div class="header-text">
-                <h1>TRASHKUYYY</h1>
-                <p>Identifikasi jenis sampahmu dengan TRASHKUYYY AI</p>
+    <header class="navbar">
+        <picture>
+            <source media="(max-width: 500px)" srcset="Icon.PNG">
+            <img src="Logo.PNG" alt="TRASHKUYYY Logo" class="logo">
+        </picture>
+
+        <a href="history.html" class="nav-button">
+            See History <span class="nav-icon" id="historyIcon"></span>
+        </a>
+    </header>
+
+    <main class="main-container">
+        <section class="hero">
+            <h1>
+                <span class="hero-title-1">Scan the Trash,</span><br>
+                <span class="hero-title-2">Start the </span><span class="hero-title-2-sub">Change.</span>
+            </h1>
+        </section>
+
+        <section class="classification-grid">
+            <div class="glass-card upload-card">
+                <h2>Upload Image</h2>
+
+                <div id="uploadArea" class="upload-box" onclick="document.getElementById('fileInput').click()">
+                    <div class="image-placeholder" id="uploadIcon"></div>
+                    <p>Drag & drop your image here</p>
+                    <p>or</p>
+                    <button type="button" class="primary-btn">Choose Image</button>
+                </div>
+
+                <div id="previewSection" class="preview-section">
+                    <img id="previewImage" class="preview-image" alt="Preview">
+
+                    <div class="button-row">
+                        <button type="button" class="primary-btn" id="analyzeBtn" onclick="analyzeImage(event)">
+                            Analyse Image
+                        </button>
+                        <button type="button" class="secondary-btn" onclick="resetForm()">
+                            Reset
+                        </button>
+                    </div>
+                </div>
+
+                <div id="errorBox" class="error-box">
+                    There’s an error occured. Please check again.
+                </div>
+
+                <input type="file" id="fileInput" accept="image/*" onchange="handleFileSelect(event)">
+            </div>
+
+            <div class="glass-card result-card">
+                <h2>Classification Result</h2>
+
+                <div id="resultPlaceholder" class="empty-result">
+                    <div class="image-placeholder" id="resultIcon"></div>
+                    <p>There is no result yet.</p>
+                    <p>Upload image to see classification result.</p>
+                </div>
+
+                <div id="resultContent" class="result-content"></div>
+            </div>
+        </section>
+
+        <section class="glass-card how-to-use">
+            <div class="how-title">
+                <h2>How to Use</h2>
+                <img src="Logo.PNG" alt="TRASHKUYYY Logo">
+            </div>
+
+            <ol>
+                <li>
+                    <strong>Upload Waste Image</strong><br>
+                    Choose or drag an image of the waste item you want to classify.
+                </li>
+                <li>
+                    <strong>Click Analyze Image</strong><br>
+                    Press the “Analyse Image” button and wait for the AI to process the image.
+                </li>
+                <li>
+                    <strong>View Classification Result</strong><br>
+                    TRASHKUYYY will show the waste category, confidence score, description, recycling method, and environmental impact.
+                </li>
+                <li>
+                    <strong>Learn How to Manage It</strong><br>
+                    Read the recommended waste management steps to understand how to dispose of or recycle the item properly.
+                </li>
+                <li>
+                    <strong>Check Your History</strong><br>
+                    Open the History page to see your previous classification results.
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="Icon.PNG" alt="TRASHKUYYY Logo" class="footer-logo">
+
+            <div class="footer-text">
+                <p>
+                    TRASHKUYY is an AI-powered waste classification website designed to help users identify different types of waste quickly
+                    and easily. Through technology, we want to encourage people to better understand their waste and take small actions that
+                    support a cleaner and more sustainable environment.
+                </p>
+
+                <div class="footer-contact">
+                    <p>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.7 21.4 2.6 13.3 2.6 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 4 .1.4 0 .9-.3 1.2l-2.2 2.2z"/>
+                            </svg>
+                        </span>
+                        0811-1234-6790
+                    </p>
+
+                    <p>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.2-7.1 4.4c-.3.2-.7.2-1 0L4.4 8.2c-.5-.3-.6-1-.3-1.5.3-.5 1-.6 1.5-.3L12 10.3l6.4-3.9c.5-.3 1.2-.2 1.5.3.3.5.2 1.2-.3 1.5z"/>
+                            </svg>
+                        </span>
+                        support@trashkuyy.com
+                    </p>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">© TRASHKUYY 2026 — All Rights Reserved.</p>
+
+                    <div class="footer-social">
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" class="social-icon">
+                                <path d="M15 3c.4 3 2.1 5 5 5v4c-2.2 0-4-.7-5-2v6.2A5.2 5.2 0 1 1 9.8 11" />
+                                <path d="M15 3v13.2" />
+                            </svg>
+                        </a>
+
+                        <a href="#" aria-label="X">
+                            <svg viewBox="0 0 24 24" class="social-icon x-icon">
+                                <path d="M4 4l11.5 16h4.5L8.5 4H4z" />
+                                <path d="M4 20L20 4" />
+                            </svg>
+                        </a>
+
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" class="social-icon">
+                                <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1z" />
+                            </svg>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" class="social-icon">
+                                <rect x="4" y="4" width="16" height="16" rx="5" />
+                                <circle cx="12" cy="12" r="3.5" />
+                                <circle cx="17" cy="7" r="0.8" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div class="container">
-        <div class="grid">
-            <div>
-                <div class="card">
-                    <h2 class="card-title">Upload Gambar</h2>
-                    
-                    <div id="uploadArea" class="upload-area" onclick="document.getElementById('fileInput').click()">
-                        <div class="upload-area-icon">🖼️</div>
-                        <p>Drag & drop gambar di sini</p>
-                        <p style="font-size: 14px; color: #9ca3af; margin-bottom: 16px;">atau</p>
-                        <button class="btn btn-primary">Pilih Gambar</button>
-                    </div>
-
-                    <div id="previewSection" style="display: none;">
-                        <div class="preview-container">
-                            <img id="previewImage" class="preview-image" alt="Preview">
-                        </div>
-                        <div class="button-group">
-                            <button class="btn btn-primary" onclick="analyzeImage()" id="analyzeBtn">
-                                Analisis Gambar
-                            </button>
-                            <button class="btn btn-secondary" onclick="resetForm()">Reset</button>
-                        </div>
-                        <div id="errorBox" style="display: none;" class="error-box">
-                            <div class="error-box-icon">⚠️</div>
-                            <p id="errorText"></p>
-                        </div>
-                    </div>
-
-                    <input type="file" id="fileInput" accept="image/*" onchange="handleFileSelect(event)">
-                </div>
-
-                <!-- Info Card -->
-                <div class="info-card">
-                    <h3> Cara Penggunaan</h3>
-                    <ol class="info-list">
-                        <li><span class="info-number">1</span>Upload gambar sampah</li>
-                        <li><span class="info-number">2</span>Klik "Analisis Gambar"</li>
-                        <li><span class="info-number">3</span>Lihat hasil klasifikasi</li>
-                    </ol>
-                </div>
-            </div>
-
-            <!-- Result Section -->
-            <div>
-                <div class="card">
-                    <h2 class="card-title">Hasil Klasifikasi</h2>
-                    
-                    <div id="resultPlaceholder" class="result-placeholder">
-                        <div class="result-placeholder-icon">🖼️</div>
-                        <p>Upload gambar dan klik analisis untuk melihat hasil</p>
-                    </div>
-
-                    <div id="resultContent" class="result-content" style="display: none;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

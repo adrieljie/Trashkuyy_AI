@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRASHKUYY - History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <img src="Logo.PNG" alt="TRASHKUYYY Logo" class="logo">
+
+    <a href="main.html" class="nav-button">
+        Home <span class="nav-icon" id="homeIcon"></span>
+    </a>
+    </header>
+
+    <main class="main-container">
+        <section class="glass-card history-card">
+            <h1>Classification History</h1>
+
+            <button type="button" class="primary-btn clear-btn" onclick="clearHistory()">
+                Clear History <svg viewBox="0 0 24 24" class="clear-btn-icon">
+            <path d="M9 2h6c.6 0 1 .4 1 1v2h4v2H4V5h4V3c0-.6.4-1 1-1zm1 3h4V4h-4v1zm-3 4h10l-.8 11.2c-.1 1-.9 1.8-1.9 1.8H9.7c-1 0-1.8-.8-1.9-1.8L7 9z"/>
+        </svg>
+            </button>
+
+            <div id="historyList"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="Icon.PNG" alt="TRASHKUYYY Logo" class="footer-logo">
+
+            <div class="footer-text">
+                <p>
+                    TRASHKUYY is an AI-powered waste classification website designed to help users identify different types of waste quickly
+                    and easily. Through technology, we want to encourage people to better understand their waste and take small actions that
+                    support a cleaner and more sustainable environment.
+                </p>
+
+                <div class="footer-contact">
+                    <p>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.7 21.4 2.6 13.3 2.6 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 4 .1.4 0 .9-.3 1.2l-2.2 2.2z"/>
+                            </svg>
+                        </span>
+                        0811-1234-6790
+                    </p>
+
+                    <p>
+                        <span class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.2-7.1 4.4c-.3.2-.7.2-1 0L4.4 8.2c-.5-.3-.6-1-.3-1.5.3-.5 1-.6 1.5-.3L12 10.3l6.4-3.9c.5-.3 1.2-.2 1.5.3.3.5.2 1.2-.3 1.5z"/>
+                            </svg>
+                        </span>
+                        support@trashkuyy.com
+                    </p>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">© TRASHKUYY 2026 — All Rights Reserved.</p>
+
+                    <div class="footer-social">
+                        <a href="#" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" class="social-icon">
+                                <path d="M15 3c.4 3 2.1 5 5 5v4c-2.2 0-4-.7-5-2v6.2A5.2 5.2 0 1 1 9.8 11" />
+                                <path d="M15 3v13.2" />
+                            </svg>
+                        </a>
+
+                        <a href="#" aria-label="X">
+                            <svg viewBox="0 0 24 24" class="social-icon x-icon">
+                                <path d="M4 4l11.5 16h4.5L8.5 4H4z" />
+                                <path d="M4 20L20 4" />
+                            </svg>
+                        </a>
+
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" class="social-icon">
+                                <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1z" />
+                            </svg>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" class="social-icon">
+                                <rect x="4" y="4" width="16" height="16" rx="5" />
+                                <circle cx="12" cy="12" r="3.5" />
+                                <circle cx="17" cy="7" r="0.8" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        loadHistory();
+    </script>
+</body>
+</html>
