@@ -1,138 +1,138 @@
 {
   "battery": {
     "title": "Battery",
-    "description": "Sampah elektronik berbentuk baterai yang mengandung bahan kimia berbahaya.",
+    "description": "Electronic waste in the form of batteries that contain hazardous chemicals.",
     "processing": [
-      "Kumpulkan di dropbox e-waste.",
-      "Jangan campur dengan sampah biasa.",
-      "Kirim ke fasilitas daur ulang baterai.",
-      "Isolasi kutub baterai agar tidak korsleting."
+      "Collect them in an e-waste dropbox.",
+      "Do not mix them with regular waste.",
+      "Send them to a battery recycling facility.",
+      "Insulate the battery terminals to prevent short circuits."
     ],
     "impact": [
-      "Mengandung merkuri, kadmium, dan timbal yang sangat beracun.",
-      "Mencemari tanah dan air.",
-      "Berpotensi menyebabkan kebakaran."
+      "Contains mercury, cadmium, and lead, which are highly toxic.",
+      "Pollutes soil and water.",
+      "Has the potential to cause fires."
     ]
   },
   "biological": {
     "title": "Biological",
-    "description": "Sampah organik basah seperti sisa makanan, daun, dan buah busuk.",
+    "description": "Wet organic waste such as food scraps, leaves, and rotten fruit.",
     "processing": [
-      "Buat kompos.",
-      "Gunakan lubang biopori atau komposter.",
-      "Dapat dijadikan eco enzyme."
+      "Turn it into compost.",
+      "Use a biopore hole or compost bin.",
+      "It can be processed into eco enzyme."
     ],
     "impact": [
-      "Menghasilkan gas metana penyebab pemanasan global.",
-      "Menghasilkan bau busuk dan menarik hama.",
-      "Mencemari lingkungan jika bercampur sampah lain."
+      "Produces methane gas, which contributes to global warming.",
+      "Creates unpleasant odors and attracts pests.",
+      "Pollutes the environment if mixed with other waste."
     ]
   },
   "cardboard": {
     "title": "Cardboard",
-    "description": "Sampah kardus yang mudah didaur ulang.",
+    "description": "Cardboard waste that is easy to recycle.",
     "processing": [
-      "Lipat dan pisahkan dari sampah basah.",
-      "Kirim ke bank sampah atau pengepul.",
-      "Daur ulang menjadi kardus baru."
+      "Fold it and separate it from wet waste.",
+      "Send it to a waste bank or collector.",
+      "Recycle it into new cardboard products."
     ],
     "impact": [
-      "Tidak bisa didaur ulang jika basah atau kotor.",
-      "Menambah volume sampah kering di TPA."
+      "Cannot be recycled if it is wet or dirty.",
+      "Increases the volume of dry waste in landfills."
     ]
   },
   "clothes": {
     "title": "Clothes",
-    "description": "Pakaian bekas yang masih bisa digunakan atau didaur ulang.",
+    "description": "Used clothing that can still be worn or recycled.",
     "processing": [
-      "Donasikan pakaian layak pakai.",
-      "Upcycle menjadi tas, lap, atau kerajinan.",
-      "Recycle ke pabrik tekstil."
+      "Donate clothes that are still wearable.",
+      "Upcycle them into bags, cleaning cloths, or crafts.",
+      "Recycle them through textile recycling facilities."
     ],
     "impact": [
-      "Serat sintetis menghasilkan mikroplastik.",
-      "Butuh puluhan hingga ratusan tahun untuk terurai.",
-      "Industri fashion menjadi penghasil limbah kedua terbesar dunia."
+      "Synthetic fibers produce microplastics.",
+      "Takes decades to hundreds of years to decompose.",
+      "The fashion industry is one of the largest contributors to waste."
     ]
   },
   "glass": {
     "title": "Glass",
-    "description": "Botol atau pecahan kaca yang dapat didaur ulang 100%.",
+    "description": "Glass bottles or broken glass that can be 100% recycled.",
     "processing": [
-      "Pisahkan dari sampah lain.",
-      "Kumpulkan dan kirim ke pengepul kaca.",
-      "Daur ulang menjadi produk kaca baru."
+      "Separate it from other waste.",
+      "Collect and send it to a glass waste collector.",
+      "Recycle it into new glass products."
     ],
     "impact": [
-      "Pecahan kaca membahayakan manusia.",
-      "Tidak dapat terurai sehingga menumpuk di TPA."
+      "Broken glass can be dangerous to humans.",
+      "Does not decompose and accumulates in landfills."
     ]
   },
   "metal": {
     "title": "Metal",
-    "description": "Sampah logam dan kaleng.",
+    "description": "Metal waste and cans.",
     "processing": [
-      "Bersihkan dari sisa makanan.",
-      "Remukkan agar hemat ruang.",
-      "Kumpulkan untuk didaur ulang."
+      "Clean it from food residue.",
+      "Crush it to save space.",
+      "Collect it for recycling."
     ],
     "impact": [
-      "Berkarat dan mencemari tanah.",
-      "Menambah sampah anorganik di TPA."
+      "Can rust and pollute the soil.",
+      "Adds to inorganic waste in landfills."
     ]
   },
   "paper": {
     "title": "Paper",
-    "description": "Jenis kertas seperti dokumen, majalah, dan buku.",
+    "description": "Types of paper such as documents, magazines, and books.",
     "processing": [
-      "Pisahkan dari sampah basah.",
-      "Setorkan ke bank sampah.",
-      "Daur ulang kembali menjadi kertas."
+      "Separate it from wet waste.",
+      "Send it to a waste bank.",
+      "Recycle it back into paper products."
     ],
     "impact": [
-      "Membusuk dan tidak bisa didaur ulang jika basah.",
-      "Meningkatkan kebutuhan penebangan pohon."
+      "Can rot and become unrecyclable if wet.",
+      "Increases the need for tree cutting."
     ]
   },
   "plastic": {
     "title": "Plastic",
-    "description": "Jenis plastik seperti botol PET, kantong, dan kemasan.",
+    "description": "Plastic items such as PET bottles, bags, and packaging.",
     "processing": [
-      "Pisahkan berdasarkan jenisnya.",
-      "Cuci sebelum daur ulang.",
-      "Gunakan dropbox plastik atau bank sampah."
+      "Separate it based on its type.",
+      "Wash it before recycling.",
+      "Use plastic dropboxes or waste banks."
     ],
     "impact": [
-      "Terurai dalam 400–1.000 tahun.",
-      "Memecah menjadi mikroplastik yang masuk tubuh manusia.",
-      "Merusak ekosistem laut."
+      "Takes 400–1,000 years to decompose.",
+      "Breaks down into microplastics that can enter the human body.",
+      "Damages marine ecosystems."
     ]
   },
   "shoes": {
     "title": "Shoes",
-    "description": "Sepatu bekas berbahan karet, kain, dan kulit.",
+    "description": "Used shoes made from rubber, fabric, and leather.",
     "processing": [
-      "Donasikan jika masih layak.",
-      "Upcycle menjadi pot, dekorasi, atau bahan kreatif.",
-      "Gunakan program daur ulang sepatu."
+      "Donate them if they are still wearable.",
+      "Upcycle them into plant pots, decorations, or creative materials.",
+      "Use shoe recycling programs."
     ],
     "impact": [
-      "Bahan campuran sulit terurai.",
-      "Menghasilkan mikroplastik."
+      "Mixed materials are difficult to decompose.",
+      "Produces microplastics."
     ]
   },
   "trash": {
     "title": "Trash",
-    "description": "Sampah residu yang tidak dapat didaur ulang.",
+    "description": "Residual waste that cannot be recycled.",
     "processing": [
-      "Minimalkan produksi sampah.",
-      "Pisahkan dari sampah daur ulang.",
-      "Gunakan fasilitas incinerator dengan kontrol emisi."
+      "Minimize waste production.",
+      "Separate it from recyclable waste.",
+      "Use incinerator facilities with emission control."
     ],
     "impact": [
-      "Menambah beban TPA.",
-      "Menghasilkan gas metana dan cairan beracun.",
-      "Mencemari tanah dan air."
+      "Increases the burden on landfills.",
+      "Produces methane gas and toxic liquid waste.",
+      "Pollutes soil and water."
     ]
   }
 }

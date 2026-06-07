@@ -7,16 +7,27 @@ import uvicorn
 import os
 import shutil
 import json
+import tempfile
 
-MODEL_PATH = "model/waste_classifier_transfer.h5"
-DATASET_DIR = "garbage-dataset"
-INFO_PATH = "backend/data/waste_info.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(BASE_DIR)
+
+MODEL_PATH = os.path.join(BASE_DIR, "model", "waste_classifier_transfer.h5")
+INFO_PATH = os.path.join(BASE_DIR, "data", "waste_info.json")
 
 model = tf.keras.models.load_model(MODEL_PATH)
-class_names = sorted([
-    d for d in os.listdir(DATASET_DIR)
-    if os.path.isdir(os.path.join(DATASET_DIR, d))
-])
+class_names = [
+    "battery",
+    "biological",
+    "cardboard",
+    "clothes",
+    "glass",
+    "metal",
+    "paper",
+    "plastic",
+    "shoes",
+    "trash"
+]
 
 with open(INFO_PATH, "r") as f:
     WASTE_INFO = json.load(f)
@@ -43,14 +54,16 @@ def predict(img_path):
 
 @app.post("/predict")
 async def predict_api(file: UploadFile = File(...)):
+    suffix = os.path.splitext(file.filename)[1]
 
-    temp_path = f"temp_{file.filename}"
+    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as temp:
+        shutil.copyfileobj(file.file, temp)
+        temp_path = temp.name
 
-    with open(temp_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
-
-    label, conf = predict(temp_path)
-    os.remove(temp_path)
+    try:
+        label, conf = predict(temp_path)
+    finally:
+        os.remove(temp_path)
 
     info = WASTE_INFO.get(label, {
         "description": "No info available.",
@@ -63,7 +76,6 @@ async def predict_api(file: UploadFile = File(...)):
         "confidence": round(conf, 4),
         "info": info
     }
-
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
