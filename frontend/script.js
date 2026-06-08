@@ -193,7 +193,7 @@ async function analyzeImage(event) {
         const formData = new FormData();
         formData.append('file', selectedFile);
 
-        const response = await fetch('http://127.0.0.1:8000/predict', {
+        const response = await fetch('https://adrieljie-trashkuyy-backend.hf.space/predict', {
             method: 'POST',
             body: formData
         });
@@ -205,7 +205,8 @@ async function analyzeImage(event) {
         const data = await response.json();
 
         displayResult(data);
-        saveToHistory(data);
+        await saveToHistory(data);
+        errorBox.style.display = 'none';
 
     } catch (error) {
         console.error(error);
@@ -311,9 +312,41 @@ function resetForm() {
     }
 }
 
-function saveToHistory(data) {
+function compressImage(imageData, maxWidth = 500, quality = 0.65) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+
+        img.onload = function() {
+            const canvas = document.createElement('canvas');
+
+            const scale = Math.min(maxWidth / img.width, 1);
+            canvas.width = img.width * scale;
+            canvas.height = img.height * scale;
+
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            const compressedData = canvas.toDataURL('image/jpeg', quality);
+            resolve(compressedData);
+        };
+
+        img.onerror = function() {
+            reject(new Error('Failed to compress image'));
+        };
+
+        img.src = imageData;
+    });
+}
+
+async function saveToHistory(data) {
     const history = JSON.parse(localStorage.getItem('classificationHistory')) || [];
     const style = categoryStyles[data.label] || categoryStyles.trash;
+
+    let compressedImage = null;
+
+    if (selectedImageData) {
+        compressedImage = await compressImage(selectedImageData, 500, 0.65);
+    }
 
     const newItem = {
         label: data.label,
@@ -322,12 +355,14 @@ function saveToHistory(data) {
         confidence: data.confidence,
         description: data.info.description || 'No description available.',
         date: new Date().toLocaleString('en-US'),
-        image: selectedImageData
+        image: compressedImage
     };
 
     history.unshift(newItem);
 
-    localStorage.setItem('classificationHistory', JSON.stringify(history));
+    const limitedHistory = history.slice(0, 10);
+
+    localStorage.setItem('classificationHistory', JSON.stringify(limitedHistory));
 }
 
 function loadHistory() {

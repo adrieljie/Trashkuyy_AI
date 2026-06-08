@@ -1,26 +1,17 @@
-# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# macOS
 .DS_Store
-
-# VS Code
 .vscode/
-
-# Dataset
 garbage-dataset/
 dataset/
 *.jpg
 *.jpeg
 *.png
-
-# Environment
 .env
 venv/
 .venv/
-
-# Logs
 *.log
+node_modules/
+.vercel/
