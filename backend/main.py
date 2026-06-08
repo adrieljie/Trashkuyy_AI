@@ -43,6 +43,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def root():
+    return {"message": "TRASHKUYY backend is running"}
+
 def predict(img_path):
     img = image.load_img(img_path, target_size=(224, 224))
     img_array = np.expand_dims(image.img_to_array(img) / 255.0, axis=0)
