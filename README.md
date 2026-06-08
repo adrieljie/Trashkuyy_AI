@@ -5,8 +5,7 @@ This project demonstrates the implementation of artificial intelligence in image
 
 ## Live Demo
 
-Frontend: https://trashkuyy.vercel.app  
-Backend API: https://adrieljie-trashkuyy-backend.hf.space
+You can access the website through: [https://trashkuyy.vercel.app](https://trashkuyy.vercel.app)
 
 ## Features
 
