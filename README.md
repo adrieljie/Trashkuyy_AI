@@ -1,4 +1,4 @@
-# TRASHKUYY
+# About TRASHKUYY
 TRASHKUYY is an AI-powered waste classification website developed as part of an Artificial Intelligence course project. The website allows users to upload an image of waste, analyze it using an AI model, and receive classification results along with confidence score, waste description, processing recommendations, and environmental impact.
 
 This project demonstrates the implementation of artificial intelligence in image classification, specifically for waste recognition and environmental education.
