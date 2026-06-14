@@ -49,6 +49,12 @@ The system supports the following waste categories:
 - Hugging Face Spaces
 - Docker
 
+### Model Approach
+- Deep Learning
+- Convolutional Neural Network (CNN)
+- Transfer Learning
+- Image Classification
+
 ## Project Structure
 
 ```txt
